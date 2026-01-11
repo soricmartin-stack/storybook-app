@@ -1,0 +1,89 @@
+{
+  "expo": {
+    "name": "StoryTime Creator",
+    "slug": "storytime-creator",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6366F1"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.soricmartinstack.storybook",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "StoryTime needs access to your photo library to create storybooks from your photos.",
+        "NSCameraUsageDescription": "StoryTime needs camera access to capture new photos for storybook pages.",
+        "NSMicrophoneUsageDescription": "StoryTime may need microphone access for voice recording features."
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#6366F1"
+      },
+      "package": "com.soricmartinstack.storybook",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ],
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"
+      },
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "build": {
+        "babel": {
+          "include": ["react-native-reanimated"]
+        }
+      }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "StoryTime needs access to your photos to create beautiful storybooks.",
+          "cameraPermission": "StoryTime needs camera access to capture photos for storybook pages."
+        }
+      ],
+      "expo-camera"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "storytime-cea95"
+      },
+      "router": {
+        "origin": false
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/storytime-cea95",
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD"
+    },
+    "jsEngine": "hermes",
+    "packagerOpts": {
+      "sourceExts": ["expo.ts", "expo.tsx", "expo.js", "expo.jsx", "ts", "tsx", "js", "jsx", "json", "svg"]
+    }
+  }
+}
